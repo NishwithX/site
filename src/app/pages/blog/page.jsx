@@ -2,7 +2,7 @@
 
 import { useRouter } from 'next/navigation';
 
-export default function blog() {
+export default function Blog() {
   const router = useRouter();
 
   const handleBack = () => {
