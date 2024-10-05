@@ -1,8 +1,7 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 const HeartJar: React.FC = () => {
   const [fillPercentage, setFillPercentage] = useState(0);
-  const [isFilling, setIsFilling] = useState(false);
   const [showHeart, setShowHeart] = useState(true);
   const [showPopup, setShowPopup] = useState(false);
   const [popupFade, setPopupFade] = useState(false);
@@ -27,12 +26,11 @@ const HeartJar: React.FC = () => {
   };
 
   const startFilling = () => {
-    setIsFilling(true);
     incrementFill(); // Increment only once per tap or press
   };
 
   const stopFilling = () => {
-    setIsFilling(false); // Stop filling on release
+    // Currently, no state changes are needed here
   };
 
   return (
@@ -82,34 +80,31 @@ const HeartJar: React.FC = () => {
             />
           </svg>
           <div style={{ userSelect: 'none' }}>
-  <p style={{ textAlign: 'center', marginTop: '5px' }}>
-    Tap {fillPercentage}%
-  </p>
-</div>
-
-       
+            <p style={{ textAlign: 'center', marginTop: '5px' }}>
+              Tap {fillPercentage}%
+            </p>
+          </div>
         </div>
       )}
 
-{/* Popup message */}
-{showPopup && (
-  <div style={{
-    position: 'fixed',
-    bottom: '20px', // Position it at the bottom of the screen
-    left: '50%',
-    transform: `translate(-50%, ${popupFade ? '100%' : '0'})`, // Slide up effect
-    backgroundColor: 'rgba(0, 0, 0, 0.8)',
-    color: 'pink',
-    padding: '20px',
-    borderRadius: '8px',
-    zIndex: 10,
-    opacity: popupFade ? 0 : 1, // Control opacity for fade effect
-    transition: 'transform 0.5s ease, opacity 1s ease' // Transition for slide and fade effects
-  }}>
-    <h2>Thank You!</h2>
-  </div>
-)}
-
+      {/* Popup message */}
+      {showPopup && (
+        <div style={{
+          position: 'fixed',
+          bottom: '20px', // Position it at the bottom of the screen
+          left: '50%',
+          transform: `translate(-50%, ${popupFade ? '100%' : '0'})`, // Slide up effect
+          backgroundColor: 'rgba(0, 0, 0, 0.8)',
+          color: 'pink',
+          padding: '20px',
+          borderRadius: '8px',
+          zIndex: 10,
+          opacity: popupFade ? 0 : 1, // Control opacity for fade effect
+          transition: 'transform 0.5s ease, opacity 1s ease' // Transition for slide and fade effects
+        }}>
+          <h2>Thank You!</h2>
+        </div>
+      )}
     </>
   );
 };
