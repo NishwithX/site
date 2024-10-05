@@ -1,6 +1,6 @@
 "use client"; // Mark this file as a Client Component
 
-import React, { useRef, useEffect } from 'react'; // Import React and useRef
+import React from 'react'; // Import React
 import localFont from "next/font/local";
 import "./globals.css";
 import Footer from "./components/Footer"; // Ensure this path is correct
@@ -21,7 +21,6 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
       <head>
@@ -29,7 +28,6 @@ export default function RootLayout({
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased overflow-hidden h-screen flex flex-col`}
-        style={{ overflowY: 'hidden' }} // Ensure no vertical scrolling
       >
         {/* Main content */}
         <div className="flex-grow flex flex-col justify-center items-center">
