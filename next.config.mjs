@@ -1,14 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    async rewrites() {
-      return [
-        {
-          source: '/:path*', // Catch all paths
-          destination: '/pages/:path*', // Map them to the corresponding path under /pages/
-        },
-      ];
-    },
-  };
-  
-  export default nextConfig;
-  
+  output: 'export',
+  basePath: '/site', // Set to your GitHub repository name (just the name, not the full URL)
+  assetPrefix: '/site/', // Ensure this matches your basePath
+};
+
+export default nextConfig;
