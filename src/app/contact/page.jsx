@@ -1,7 +1,7 @@
 "use client"; // Ensure this is at the top
 
 import { useRouter } from 'next/navigation';
-import SocialIcons from '../../components/SocialIcons'; // Adjust the path as necessary
+import SocialIcons from '../components/SocialIcons'; // Adjust the path as necessary
 
 export default function Contact() {
   const router = useRouter();
