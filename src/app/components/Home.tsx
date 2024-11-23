@@ -10,7 +10,7 @@ export default function Home() {
         <h1 className="text-xl font-bold mb-2">Student, Programmer, Linux User</h1>
         <p className="text-base mb-4">
           I&apos;m a self-taught software developer<br />
-          who&apos;s very passionate about Linux.<br />
+           very passionate about Linux.<br />
            <br />
           Let&apos;s connect and collaborate!
         </p>
