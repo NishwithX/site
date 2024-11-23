@@ -11,7 +11,7 @@ export default function Home() {
         <p className="text-base mb-4">
           I&apos;m a self-taught software developer<br />
           who&apos;s very passionate about Linux.<br />
-          I like to build cool stuff but haven&apos;t built anything yet ;) <br />
+           <br />
           Let&apos;s connect and collaborate!
         </p>
       </div>
