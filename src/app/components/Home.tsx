@@ -7,7 +7,7 @@ export default function Home() {
     <div className="flex flex-col justify-center items-start h-screen overflow-hidden p-7">
       <div className="mt-[-70%] mb-1 text-left">
         <Greetings /> {/* This will display the greeting */}
-        <h1 className="text-xl font-bold mb-2">Student, Programmer, Linux User</h1>
+        <h1 className="text-xl font-bold mb-2"></h1>
         <p className="text-base mb-4">
           I&apos;m a self-taught software developer<br />
            very passionate about Linux.<br />
